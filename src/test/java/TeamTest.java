@@ -16,7 +16,7 @@ public class TeamTest {
 
     @After
     public void tearDown() throws Exception {
-
+        Team.clearAllTeams();
     }
 
     @Test
@@ -41,6 +41,15 @@ public class TeamTest {
         assertEquals(2, testTeam.addNewMember().size());
 
     }
+
+    @Test
+    public void testTeams_correctlyReturned_true() {
+        Team testTeam = setUpNewTeam();
+        Team otherTeam = new Team("Team2", "Another team", "Member1", new ArrayList<>());
+        assertTrue(Team.getAll().contains(testTeam));
+        assertTrue(Team.getAll().contains(otherTeam));
+    }
+
     //helper
     public Team setUpNewTeam() {
         return new Team("Team1", "A team", "Member1", new ArrayList<>());
