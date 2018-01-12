@@ -3,6 +3,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 public class TeamTest {
 
     @Before
@@ -17,11 +19,19 @@ public class TeamTest {
 
     @Test
     public void testTeam_instantiatesCorrectly_true() {
-        Team newTeam = setUpNewTeam();
+        Team testTeam = setUpNewTeam();
+        assertEquals(true, testTeam instanceof Team);
+    }
+
+    @Test
+    public void testTeam_getsName() {
+        Team testTeam = setUpNewTeam();
+        assertEquals("Team1", testTeam.getName());
+
     }
 
     //helper
     public Team setUpNewTeam() {
-        return new Team();
+        return new Team("Team1", "A team");
     }
 }
