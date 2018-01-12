@@ -18,6 +18,6 @@ public class Team {
     }
 
     public String getName() {
-        return null;
+        return name;
     }
 }
