@@ -24,14 +24,14 @@ public class TeamTest {
     }
 
     @Test
-    public void testTeam_getsName() {
+    public void testTeam_getsProperties() {
         Team testTeam = setUpNewTeam();
         assertEquals("Team1", testTeam.getName());
-
+        assertEquals("A team", testTeam.getDescription());
+        assertEquals("Member1", testTeam.getMember());
     }
-
     //helper
     public Team setUpNewTeam() {
-        return new Team("Team1", "A team");
+        return new Team("Team1", "A team", "Member1");
     }
 }
