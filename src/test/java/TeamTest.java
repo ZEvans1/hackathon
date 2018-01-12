@@ -3,6 +3,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class TeamTest {
@@ -30,8 +32,14 @@ public class TeamTest {
         assertEquals("A team", testTeam.getDescription());
         assertEquals("Member1", testTeam.getMember());
     }
+
+    @Test
+    public void testTeam_addsNewMembers() {
+        Team testTeam = setUpNewTeam();
+        assertEquals(2, testTeam.getMemberList().size());
+    }
     //helper
     public Team setUpNewTeam() {
-        return new Team("Team1", "A team", "Member1");
+        return new Team("Team1", "A team", "Member1", new ArrayList<String>());
     }
 }
