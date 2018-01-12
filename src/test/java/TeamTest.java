@@ -53,7 +53,7 @@ public class TeamTest {
     @Test
     public void testTeam_getsCreatedWithId() throws Exception {
         Team testTeam = setUpNewTeam();
-        assertEquals(0, testTeam.getId());
+        assertEquals(1, testTeam.getId());
     }
 
     //helper
