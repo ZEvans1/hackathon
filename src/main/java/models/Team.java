@@ -7,6 +7,7 @@ public class Team {
     private String description;
     private String member;
     private String newMember;
+    private int id;
     private ArrayList<String> memberList;
     private static ArrayList<Team> instances = new ArrayList<>();
 
@@ -19,6 +20,7 @@ public class Team {
         this.memberList = memberList;
         memberList.add(member);
         instances.add(this);
+        this.id = instances.size();
 
     }
 
@@ -36,6 +38,14 @@ public class Team {
 
     public String getNewMember() {
         return newMember;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public static Team findById(int id) {
+        return instances.get(id-1);
     }
 
     public ArrayList<String> getMemberList() {

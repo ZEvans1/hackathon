@@ -27,5 +27,16 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "form.hbs");
         }, new HandlebarsTemplateEngine());
+
+        //process form
+        post("/teams/new", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String name = request.queryParams("name");
+            String description = request.queryParams("description");
+            String member = request.queryParams("member");
+            Team newTeam = new Team(name, description, member, new ArrayList<>());
+            model.put("team", newTeam);
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }

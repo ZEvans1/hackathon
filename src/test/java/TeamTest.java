@@ -50,6 +50,12 @@ public class TeamTest {
         assertTrue(Team.getAll().contains(otherTeam));
     }
 
+    @Test
+    public void testTeam_getsCreatedWithId() throws Exception {
+        Team testTeam = setUpNewTeam();
+        assertEquals(0, testTeam.getId());
+    }
+
     //helper
     public Team setUpNewTeam() {
         return new Team("Team1", "A team", "Member1", new ArrayList<>());

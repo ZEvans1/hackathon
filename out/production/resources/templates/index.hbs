@@ -4,7 +4,7 @@
 
     {{#if teams}}
         {{#each teams}}
-        <p>{{ name }}</p>
+        <p><a href="/teams/{{id}}">{{ name }}</a></p>
         {{/each}}
     {{else}}
     <p>No teams currently registered.</p>
