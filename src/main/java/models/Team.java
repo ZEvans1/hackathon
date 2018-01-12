@@ -74,4 +74,8 @@ public class Team {
     public static void clearAllTeams() {
         instances.clear();
     }
+
+    public void update(String name) {
+        this.name = name;
+    }
 }
