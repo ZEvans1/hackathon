@@ -68,7 +68,7 @@ public class TeamTest {
         String formerName = testTeam.getName();
         int formerId = testTeam.getId();
         testTeam.update("A different name");
-        assertEquals(0, testTeam.getId());
+        assertEquals(formerId, testTeam.getId());
         assertNotEquals(formerName, testTeam.getName());
     }
 
