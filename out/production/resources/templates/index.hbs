@@ -1,6 +1,14 @@
 {{#partial "content"}}
 
+    <h1>List of Teams:</h1>
 
+    {{#if teams}}
+        {{#each teams}}
+        <p>{{ name }}</p>
+        {{/each}}
+    {{else}}
+    <p>No teams currently registered.</p>
+    {{/if}}
 
 
 {{/partial}}
