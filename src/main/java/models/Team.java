@@ -57,12 +57,17 @@ public class Team {
         return memberList;
     }
 
+    public ArrayList<String> addAnotherMember() {
+        memberList.add(newMember);
+        return memberList;
+    }
+
     public static ArrayList<Team> getAll() {
         return instances;
     }
 
-    public void addsNewMember(String member) {
-        this.member = member;
+    public void addsNewMember(String newMember) {
+        this.newMember = newMember;
         //memberList.add(member);
     }
 

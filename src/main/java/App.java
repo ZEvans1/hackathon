@@ -64,7 +64,7 @@ public class App {
             int idOfTeamToAddMember = Integer.parseInt(request.params("id"));
             Team addToTeam = Team.findById(idOfTeamToAddMember);
             addToTeam.addsNewMember(newMember);
-            addToTeam.addNewMember();
+            addToTeam.addAnotherMember();
             return new ModelAndView(model, "team-detail.hbs");
         }, new HandlebarsTemplateEngine());
     }
