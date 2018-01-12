@@ -59,7 +59,7 @@ public class TeamTest {
     @Test
     public void findReturnsCorrectPost() throws Exception {
         Team testTeam = setUpNewTeam();
-        assertEquals(0, Team.findById(testTeam.getId()).getId());
+        assertEquals(1, Team.findById(testTeam.getId()).getId());
     }
 
     //helper
