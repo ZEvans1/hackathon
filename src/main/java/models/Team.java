@@ -61,6 +61,11 @@ public class Team {
         return instances;
     }
 
+    public void addsNewMember(String member) {
+        this.member = member;
+        //memberList.add(member);
+    }
+
     public static void clearAllTeams() {
         instances.clear();
     }
