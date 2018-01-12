@@ -1,3 +1,4 @@
+import models.Team;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,4 +15,13 @@ public class TeamTest {
 
     }
 
+    @Test
+    public void testTeam_instantiatesCorrectly_true() {
+        Team newTeam = setUpNewTeam();
+    }
+
+    //helper
+    public Team setUpNewTeam() {
+        return new Team();
+    }
 }
