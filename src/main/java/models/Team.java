@@ -68,7 +68,6 @@ public class Team {
 
     public void addsNewMember(String newMember) {
         this.newMember = newMember;
-        //memberList.add(member);
     }
 
     public static void clearAllTeams() {
