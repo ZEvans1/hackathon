@@ -42,6 +42,11 @@ public class Team {
         return memberList;
     }
 
+    public ArrayList<String> addNewMember() {
+        memberList.add(newMember);
+        return memberList;
+    }
+
     public static ArrayList<Team> getAll() {
         return instances;
     }

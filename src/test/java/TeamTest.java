@@ -31,15 +31,18 @@ public class TeamTest {
         assertEquals("Team1", testTeam.getName());
         assertEquals("A team", testTeam.getDescription());
         assertEquals("Member1", testTeam.getMember());
+        assertEquals(null, testTeam.getNewMember());
     }
 
     @Test
     public void testTeam_addsNewMembers() {
         Team testTeam = setUpNewTeam();
-        assertEquals(2, testTeam.getMemberList().size());
+        String newMember = "Member2";
+        assertEquals(2, testTeam.addNewMember().size());
+
     }
     //helper
     public Team setUpNewTeam() {
-        return new Team("Team1", "A team", "Member1", new ArrayList<String>());
+        return new Team("Team1", "A team", "Member1", new ArrayList<>());
     }
 }
